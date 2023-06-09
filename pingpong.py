@@ -29,11 +29,14 @@ class Player(GameSprite):
        if keys[K_s] and self.rect.y < windows_height - 80:
            self.rect.y += self.speed
 
+platforml = Player("racket.png", 30, 200, 4, 50, 250)
+platformr = Player("racket.png", 520, 200, 4, 50, 250)
+ball = GameSprite("tennis_ball.png", 200, 200, 4, 50, 50)
+
 back = (200,255,255)
 windows_with = 600
 windows_height = 500
 mw = display.set_mode((windows_with,windows_height))
-mw.fill(back)
 clock = time.Clock()
 FPS = 60
 game = True
@@ -43,7 +46,12 @@ while game:
         if e.type == QUIT:
             game = False
     
+        if finish != True
 
+        mw.fill(back)
+        platforml.reset()
+        platformr.reset()
+        ball.reset()
 
     display.update()
     clock.tick(FPS)
